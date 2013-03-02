@@ -1,0 +1,27 @@
+<% content_for :head do %>
+<title>CellStories: a weekend's worth of stories for your iPhone, iPad, Android phone, and other mobile devices</title>
+
+<script type="text/javascript" language="javascript">
+	{
+	winWidth=document.all?document.body.clientWidth:window.innerWidth; 
+	if (winWidth < 481)
+	location="<%= url_for(:controller => "libraries", :action => "index", :only_path => false, :protocol => 'http://')%>"
+	}
+	</SCRIPT>
+	<% end %>
+
+<h2 class="welcome_page">Another week's worth of mobile stories at CellStories has come to a close. Come back today on your phone or your iPad to catch up on all five stories from this week.</h2>
+
+	<div id="storybox">
+	<p>This week's stories were:
+<div id="weekend_list"> 
+<% for story in @stories %>
+	<h2><%=story.rundate.strftime("%B")%> <%=story.rundate.strftime("%d")%>: <strong><%= story.title %></strong> by <%= story.author.name %></h2>
+	<p><%= story.blurb %> <br />
+	<iframe src="http://www.facebook.com/plugins/like.php?href=<%= url_for(:controller => "stories", :action => "show", :id => story, :only_path => false, :protocol => 'http://')%>&amp;layout=standard&amp;show_faces=false&amp;width=90&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; overflow:hidden; width:450px; height:30px"></iframe>
+	<p>
+	<% end %>
+	</div>
+	</div>
+
+<p>All of these stories are ready for you to read right this very second, if you visit www.cellstories.net on your mobile device. So grab yours, settle into your comfy weekend chair, and come right back. Great reading awaits you!

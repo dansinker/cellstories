@@ -1,0 +1,12 @@
+<% content_for :head do %>
+<title>CellStories: about us</title>
+<script type="text/javascript" language="javascript">
+	{
+	winWidth=document.all?document.body.clientWidth:window.innerWidth; 
+	if (winWidth < 481)
+	location="<%= url_for(:action => "mobile_about", :only_path => false, :protocol => 'http://')%>"
+	}
+	</SCRIPT>
+	<% end %>
+
+<%= render :partial => "about" %>

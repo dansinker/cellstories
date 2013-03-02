@@ -1,0 +1,68 @@
+<% content_for :head do %>
+<title><%= @story.title %> by <%= @story.author.name %> | CellStories: a daily dose of awesome </title>
+
+<meta name="Description" content="<%= @story.title %> by <%= @story.author.name %> is ready for you to read on your mobile device. CellStories offers surprising works of mobile fiction, short stories, literary journalism, and personal narrative daily on your iPhone, Android phone, iPad, or other mobile device.">
+
+<script type="text/javascript"><!--
+var winWidth = 0;
+  if( typeof( window.innerWidth ) == 'number' ) {
+    //Non-IE
+    winWidth = window.innerWidth;
+  } else if( document.documentElement && document.documentElement.clientWidth ) {
+    //IE 6+ in 'standards compliant mode'
+    winWidth = document.documentElement.clientWidth;
+  } else if( document.body && document.body.clientWidth ) {
+    //IE 4 compatible
+    winWidth = document.body.clientWidth;
+  }
+   if (navigator.userAgent.match(/^.*Android.*$/)) {}
+   else if (navigator.userAgent.match(/^.*iPad.*$/)) {}
+else if (winWidth > 501) {
+location="<%= url_for({:controller => 'info', :action => 'share_welcome', :id => @story, :only_path => false, :protocol => 'http://'}) %>"
+}
+//-->
+</script>
+<% end %>
+<div id="ad">
+<script type="text/javascript"><!--
+window.googleAfmcRequest = {
+  client: 'ca-mb-pub-8133104219885819',
+  ad_type: 'image',
+  output: 'html',
+  channel: '',
+  format: '320x50_mb',
+  oe: 'utf8',
+  color_border: '336699',
+  color_bg: 'FFFFFF',
+  color_link: '0000FF',
+  color_text: '000000',
+  color_url: '008000',
+};
+//--></script>
+<script type="text/javascript" 
+   src="http://pagead2.googlesyndication.com/pagead/show_afmc_ads.js"></script>
+</div>
+<h2><%= @story.title%></h2>
+	<h3><%= @story.author.name %></h3>
+	<p>
+		<%= simple_format @story.maintext %>
+</p>
+<div id="bio"><%= simple_format @story.author.bio %>
+
+<% if @authorstory > 1 %>
+All CellStories by <%= @story.author.name %>:
+<% for story in @story.author.stories %> 
+<li><%= link_to story.title, :controller => "stories", :action => "show", :id => story.id %></li>
+<% end %>
+<%end%>
+
+<div id="appeared"><%= simple_format @story.appeared %></div></div>
+<div id="links">
+<ul>
+<li><%= link_to 'share this story', {:action => 'share', :id => @story} %></li>
+<li><%= link_to 'read more on The Shelf', {:controller => 'libraries', :action => 'shelf'} %>
+<!--<li><%= link_to 'today&#39;s story', :controller => 'stories', :action => 'index' %>-->
+</ul>
+</div>
+<!--<iframe src="http://www.facebook.com/plugins/like.php?href=<%= url_for(:action => "show", :id => @story, :only_path => false, :protocol => 'http://')%>%2F&amp;layout=standard&amp;show_faces=false&amp;width=320&amp;action=like&amp;font=arial&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; overflow:hidden; width:320px; height:80px"></iframe>-->
+<%= percent_mobile_track(131642623176012079946991029310160143828,'individual story view') %>

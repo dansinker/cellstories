@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/cellstories/!svn/ver/30/cellstories/db/migrate
+END
+009_add_author_link_again.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/cellstories/!svn/ver/1/cellstories/db/migrate/009_add_author_link_again.rb
+END
+011_appeared_in_add.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/cellstories/!svn/ver/6/cellstories/db/migrate/011_appeared_in_add.rb
+END
+003_create_libraries.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/cellstories/!svn/ver/1/cellstories/db/migrate/003_create_libraries.rb
+END
+012_add_email.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/cellstories/!svn/ver/30/cellstories/db/migrate/012_add_email.rb
+END
+008_addblurb.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/cellstories/!svn/ver/1/cellstories/db/migrate/008_addblurb.rb
+END
+002_create_authors.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/cellstories/!svn/ver/1/cellstories/db/migrate/002_create_authors.rb
+END
+004_create_add_maintexts.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/cellstories/!svn/ver/1/cellstories/db/migrate/004_create_add_maintexts.rb
+END
+006_add_story_link.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/cellstories/!svn/ver/1/cellstories/db/migrate/006_add_story_link.rb
+END
+001_create_stories.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/cellstories/!svn/ver/1/cellstories/db/migrate/001_create_stories.rb
+END
+005_add_author_link.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/cellstories/!svn/ver/1/cellstories/db/migrate/005_add_author_link.rb
+END
+007_add_date.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/cellstories/!svn/ver/1/cellstories/db/migrate/007_add_date.rb
+END

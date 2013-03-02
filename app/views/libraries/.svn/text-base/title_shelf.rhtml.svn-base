@@ -1,0 +1,10 @@
+<p>
+<h2 class="headtitle">stories by title</h2>
+<p>
+<% for story in @titles %>
+<div id="library">
+	<h2><%= link_to story.title, :controller => "stories", :action => "show", :id => story %> by <%= story.author.name %></h2>
+	<p><%= story.blurb %></p>
+</div>
+	<p>
+	<% end %>

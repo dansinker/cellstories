@@ -1,0 +1,31 @@
+<% content_for :head do %>
+<meta name="Description" content="About CellStories: frequently asked questions about the mobile storytelling site featuring daily fiction, journalism, short stories, and personal narratives available only for your phone or iPad.">
+
+<script type="text/javascript"><!--
+var winWidth = 0;
+  if( typeof( window.innerWidth ) == 'number' ) {
+    //Non-IE
+    winWidth = window.innerWidth;
+  } else if( document.documentElement && document.documentElement.clientWidth ) {
+    //IE 6+ in 'standards compliant mode'
+    winWidth = document.documentElement.clientWidth;
+  } else if( document.body && document.body.clientWidth ) {
+    //IE 4 compatible
+    winWidth = document.body.clientWidth;
+  }
+  if (navigator.userAgent.match(/^.*Android.*$/)) {}
+  else if (navigator.userAgent.match(/^.*iPad.*$/)) {}
+else if (winWidth > 501) 
+{
+location.href="<%= url_for(:action => "desktop_about", :only_path => false, :protocol => 'http://')%>"
+}
+//-->
+</script>
+<% end %>
+
+
+
+<%= render :partial => "about" %>
+
+<%= render :partial => "bottombutton"%>
+<%= percent_mobile_track(131642623176012079946991029310160143828,'about') %>

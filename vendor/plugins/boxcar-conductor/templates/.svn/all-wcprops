@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/cellstories/!svn/ver/68/cellstories/vendor/plugins/boxcar-conductor/templates
+END
+deploy.rb.example
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/cellstories/!svn/ver/68/cellstories/vendor/plugins/boxcar-conductor/templates/deploy.rb.example
+END
+mongrel_cluster.yml.erb
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/cellstories/!svn/ver/68/cellstories/vendor/plugins/boxcar-conductor/templates/mongrel_cluster.yml.erb
+END
+Capfile.example
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/cellstories/!svn/ver/68/cellstories/vendor/plugins/boxcar-conductor/templates/Capfile.example
+END

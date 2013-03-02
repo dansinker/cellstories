@@ -1,0 +1,15 @@
+<% content_for :menu do %>
+<li>: editing &nbsp</li>
+<li><%= link_to 'Back', :action => 'list' %></li>
+<% end %>
+
+<h2>editing "<%= @story.title%>" | <%= link_to 'read this story', {:action => "show", :id => @story}, :class => 'quickview' %></h2>
+
+<% form_tag :action => 'update', :id => @story do %>
+  <%= render :partial => 'form' %>
+  <%= submit_tag 'Save' %>
+<% end %>
+
+<% content_for :bottomscripts do %>
+<%= render :partial => 'bottomscripts' %>
+<% end %>

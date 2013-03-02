@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/cellstories/!svn/ver/1/cellstories/script
+END
+console
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/cellstories/!svn/ver/1/cellstories/script/console
+END
+breakpointer
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/cellstories/!svn/ver/1/cellstories/script/breakpointer
+END
+server
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/cellstories/!svn/ver/1/cellstories/script/server
+END
+destroy
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/cellstories/!svn/ver/1/cellstories/script/destroy
+END
+runner
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/cellstories/!svn/ver/1/cellstories/script/runner
+END
+about
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/cellstories/!svn/ver/1/cellstories/script/about
+END
+generate
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/cellstories/!svn/ver/1/cellstories/script/generate
+END
+plugin
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/cellstories/!svn/ver/1/cellstories/script/plugin
+END

@@ -1,0 +1,40 @@
+<% content_for :head do %>
+<meta name="Description" content="The complete archive of CellStories, mobile journalism, cell phone fiction, short stories, and more for your iPhone, iPad, Android phone, and other mobile devices and cell phones.">
+
+<script type="text/javascript"><!--
+var winWidth = 0;
+  if( typeof( window.innerWidth ) == 'number' ) {
+    //Non-IE
+    winWidth = window.innerWidth;
+  } else if( document.documentElement && document.documentElement.clientWidth ) {
+    //IE 6+ in 'standards compliant mode'
+    winWidth = document.documentElement.clientWidth;
+  } else if( document.body && document.body.clientWidth ) {
+    //IE 4 compatible
+    winWidth = document.body.clientWidth;
+  }
+  if (navigator.userAgent.match(/^.*Android.*$/)) {}
+else if (navigator.userAgent.match(/^.*iPad.*$/)) {}
+else if (winWidth > 501) 
+{
+location.href="<%= url_for(:controller => "info", :action => "shelf_welcome", :only_path => false, :protocol => 'http://')%>"
+}
+//-->
+</script>
+<% end %>
+
+<h2>The Shelf</h2>
+<i>The official archive of CellStories. Read two fast, or access the full collection.</i>
+<p>
+<div id="quickread">
+<%= link_to_remote "<span>two new ones</span>", {:url => {:action => 'loader'}, :update => 'two_on_two'}, {:id => 'refresh'} %>
+<h2 class="headtitle"><span>quickread:</span><br> two for the road</h2>
+<div id="two_on_two"><%= render :partial => "quickread" %></div>
+</div>
+<h2 class="headtitle">the full archive</h2>
+<h2 class="headtitle"><span>view by:</span> <%= link_to_remote "date", {:url => {:action => "date_shelf"}, :before => "$('archive').update('loading...')", :update => 'archive'} %> | <%= link_to_remote "title", {:url => {:action => "title_shelf"}, :before => "$('archive').update('loading...')", :update => 'archive'} %> | <%= link_to_remote "author", {:url => {:action => "author_shelf"}, :before => "$('archive').update('loading...')", :update => 'archive'} %></h2>
+<div id="archive"></div>
+	<div id="bottom_button">
+<!--<%= link_to 'today&#39;s story', :controller => 'stories', :action => 'index' %>-->
+</div>
+<%= percent_mobile_track(131642623176012079946991029310160143828,'shelf') %>

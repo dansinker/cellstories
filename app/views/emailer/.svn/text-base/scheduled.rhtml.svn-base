@@ -1,0 +1,8 @@
+Hi <%= @story.author.name %>
+
+We wanted to let you know that your story, "<%= @story.title %>" has been scheduled to run on CellStories on <%= @story.rundate.strftime("%A, %B %d %Y")%>. We're so happy you submitted the piece to us and hope you'll spread the word about CellStories!
+
+Thanks again,
+
+Your friends at CellStories
+http://www.cellstories.net

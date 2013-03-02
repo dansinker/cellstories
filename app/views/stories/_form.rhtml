@@ -1,0 +1,24 @@
+<%= error_messages_for 'story' %>
+
+<!--[form:story]-->
+<p><label for="story_title">Title</label><br/>
+<%= text_field 'story', 'title'  %></p>
+
+<p><label for="author_name">Author</label><br/>
+<%= text_field_with_auto_complete :story, :author_name %>
+
+<p><label for="story_rundate">Run Date</label><br/>
+<%= text_field ('story', 'rundate', :id => 'datepicker', :default => nil) %></p>
+
+<p><label for="story_blurb">Blurb (100-character description of story)</label><br/> 
+<%= text_area 'story', 'blurb', 'rows' => 3, :id => 'counter'%></p> 
+
+<p><label for="story_appeared">Appeared In / Content Partner Plug</label><br/> 
+<%= text_area 'story', 'appeared', 'rows' => 2 %></p> 
+
+<p><label for="story_maintext">The Story</label><br/>
+<%= text_area 'story', 'maintext',  'rows' => 50 %></p>
+
+
+<!--[eoform:story]-->
+

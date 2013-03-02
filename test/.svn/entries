@@ -1,0 +1,77 @@
+10
+
+dir
+456
+https://cellstories.svn.beanstalkapp.com/cellstories/cellstories/test
+https://cellstories.svn.beanstalkapp.com/cellstories
+
+
+
+2009-06-29T14:33:39.163540Z
+1
+root
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+0d1e9338-710e-4053-91b0-4e97d4aeca62
+
+unit
+dir
+
+test_helper.rb
+file
+
+
+
+
+2012-02-22T12:32:12.000000Z
+fc4d849e28f089141debb18b22058277
+2009-06-29T14:33:39.163540Z
+1
+root
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1317
+
+functional
+dir
+
+integration
+dir
+
+fixtures
+dir
+
+mocks
+dir
+

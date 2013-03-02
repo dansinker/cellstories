@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/cellstories/!svn/ver/451/cellstories/config
+END
+routes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/cellstories/!svn/ver/451/cellstories/config/routes.rb
+END
+database.yml
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/cellstories/!svn/ver/1/cellstories/config/database.yml
+END
+boot.rb
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/cellstories/!svn/ver/44/cellstories/config/boot.rb
+END
+environment.rb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/cellstories/!svn/ver/45/cellstories/config/environment.rb
+END
+deploy.rb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/cellstories/!svn/ver/70/cellstories/config/deploy.rb
+END

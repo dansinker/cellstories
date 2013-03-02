@@ -1,0 +1,27 @@
+<% content_for :head do %>
+<meta name="Description" content="Submit your writing to CellStories! All the information you need to have your writing featured on CellStories' daily dose of awesome writing.">
+
+<script type="text/javascript"><!--
+var winWidth = 0;
+  if( typeof( window.innerWidth ) == 'number' ) {
+    //Non-IE
+    winWidth = window.innerWidth;
+  } else if( document.documentElement && document.documentElement.clientWidth ) {
+    //IE 6+ in 'standards compliant mode'
+    winWidth = document.documentElement.clientWidth;
+  } else if( document.body && document.body.clientWidth ) {
+    //IE 4 compatible
+    winWidth = document.body.clientWidth;
+  }
+  if (navigator.userAgent.match(/^.*Android.*$/)) {}
+  else if (navigator.userAgent.match(/^.*iPad.*$/)) {}
+else if (winWidth > 501) 
+{
+location.href="<%= url_for(:action => "desktop_submit", :only_path => false, :protocol => 'http://')%>"
+}
+//-->
+</script>
+<% end %>
+<%= render :partial => "submit" %>
+<%= render :partial => "bottombutton"%>
+<%= percent_mobile_track(131642623176012079946991029310160143828,'submit') %>

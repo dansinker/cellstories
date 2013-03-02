@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>CellStories: <%= @pagetitle %> </title>
+	<meta name = "viewport" content = "width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
+	<%= yield :head %>
+	<meta name="generator" content="Coda: it rules">
+	<meta name="author" content="Daniel Sinker">
+
+	<script type="text/javascript" language="javascript">
+		<!--
+			window.addEventListener("load", function() { setTimeout(loaded, 100) }, false);
+
+			function loaded() {
+				document.getElementById("topbox").style.visibility = "visible";
+				window.scrollTo(0, 1); // pan to the bottom, hides the location bar
+			}
+		//-->
+		</script>
+	<%= javascript_include_tag 'prototype' %>	
+	<%= stylesheet_link_tag 'scaffold' %>
+  	<%= stylesheet_link_tag 'cellstories' %>
+  	<link media="only screen and (device-width: 768px)" href="/stylesheets/CS_ipad.css" type="text/css" rel="stylesheet" />
+	<!-- Date: 2008-04-05 -->
+</head>
+<body>
+		<div id="topbox">
+		<%= link_to '<h1>cellstories: daily mobile fiction</h1>', {:controller => 'stories', :action => 'index'}, :id => "logo"%>
+		</div>
+	<div id="cellbox">
+		<% flash.each do |key, msg| %>
+		<%= content_tag :div, msg, :id => key %>
+		<% end %>
+
+	<%= yield  %>
+	</div>
+	<div id="footer"><%= link_to 'about', about_path %> | <%= link_to 'follow', follow_path %> | <%= link_to 'submit', submit_path %></div>
+
+	<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+	try {
+	var pageTracker = _gat._getTracker("UA-9357219-1");
+	pageTracker._trackPageview();
+	} catch(err) {}</script>
+</body>
+</html>

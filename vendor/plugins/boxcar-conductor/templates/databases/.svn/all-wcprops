@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/cellstories/!svn/ver/68/cellstories/vendor/plugins/boxcar-conductor/templates/databases
+END
+postgresql.yml.erb
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/cellstories/!svn/ver/68/cellstories/vendor/plugins/boxcar-conductor/templates/databases/postgresql.yml.erb
+END
+mysql.yml.erb
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/cellstories/!svn/ver/68/cellstories/vendor/plugins/boxcar-conductor/templates/databases/mysql.yml.erb
+END

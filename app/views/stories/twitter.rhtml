@@ -1,0 +1,18 @@
+<% content_for :head do %>
+<script src="http://platform.twitter.com/anywhere.js?id=N8Tvr6F8ayjidee4ETfnMA&amp;v=1" type="text/javascript"></script>
+<% end %>
+<div id="tbox">Loading TweetBox...</div>
+<script type="text/javascript">
+
+  twttr.anywhere(function (T) {
+
+    T("#tbox").tweetBox({
+      height: 100,
+      width: 300,
+      defaultContent: "this is just a test. pay no attention. <%=@story.title%> by <%=@story.author.name%>",
+      label: "tweet about CellStories",
+    });
+
+  });
+
+</script>

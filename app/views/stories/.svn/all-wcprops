@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/cellstories/!svn/ver/453/cellstories/app/views/stories
+END
+_bottomscripts.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/cellstories/!svn/ver/444/cellstories/app/views/stories/_bottomscripts.rhtml
+END
+list.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/cellstories/!svn/ver/450/cellstories/app/views/stories/list.rhtml
+END
+feed.rxml
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/cellstories/!svn/ver/399/cellstories/app/views/stories/feed.rxml
+END
+show.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/cellstories/!svn/ver/453/cellstories/app/views/stories/show.rhtml
+END
+_form.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/cellstories/!svn/ver/424/cellstories/app/views/stories/_form.rhtml
+END
+share.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/cellstories/!svn/ver/316/cellstories/app/views/stories/share.rhtml
+END
+twitter.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/cellstories/!svn/ver/385/cellstories/app/views/stories/twitter.rhtml
+END
+edit.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/cellstories/!svn/ver/445/cellstories/app/views/stories/edit.rhtml
+END
+index.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/cellstories/!svn/ver/411/cellstories/app/views/stories/index.rhtml
+END
+new.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/cellstories/!svn/ver/446/cellstories/app/views/stories/new.rhtml
+END

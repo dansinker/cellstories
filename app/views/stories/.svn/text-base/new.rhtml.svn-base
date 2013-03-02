@@ -1,0 +1,14 @@
+<% content_for :menu do %>
+<li>: new story &nbsp</li>
+<li><%= link_to 'Back', :action => 'list' %></li>
+<% end %>
+<h2>new story</h2>
+
+<% form_tag :action => 'create' do %>
+  <%= render :partial => 'form' %>
+  <%= submit_tag "Create" %>
+<% end %>
+
+<% content_for :bottomscripts do %>
+<%= render :partial => 'bottomscripts' %>
+<% end %>

@@ -1,0 +1,18 @@
+<% content_for :head do %>
+		<title>Welcome to CellStories: a daily dose of awesome stories for your iPhone, iPad, or other mobile device</title>
+		<script type="text/javascript" language="javascript">
+	{
+	winWidth=document.all?document.body.clientWidth:window.innerWidth; 
+	if (winWidth < 481)
+	location="<%= url_for({:controller => 'stories', :action => 'show', :id => @story, :only_path => false, :protocol => 'http://'}) %>"
+	}
+	</SCRIPT>
+<% end %>
+		
+<h2 class="welcome_page">CellStories is a new kind of reading experience: a mobile one. Really, we think that the best way to read something is holding it gently in your hand, not sitting at a desk or precariously balancing a laptop on your lap. </h2>
+	<div id="storybox">
+	<p><strong><%= @story.title rescue nil %></strong> by <%= @story.author.name rescue nil %> is ready for you to read on your mobile device.
+	</div>
+	<p>Stories like "<%= @story.title rescue nil %>" deserve a space where you can really dive deep into the storytelling: your couch, the train, under a tree. We promise, it's awesome.</p>
+	<p><img src="http://chart.apis.google.com/chart?cht=qr&chs=175x175&chl=http://www.cellstories.net<%= url_for(:controller => "stories", :action => "show", :id => @story)%>&chld=H|0" class="left_float">So please, follow this link again once you're on your mobile device to read that story, today's story, and to share stories with your friends on Facebook, Twitter, and Google Reader. Or, if you have a phone that can read QR codes, just zap the link to the left and your phone will take you right to "<%= @story.title rescue nil %>."</p>
+	<p>Thank you so much!</p>	

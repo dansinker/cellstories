@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/cellstories/!svn/ver/1/cellstories/test/unit
+END
+user_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/cellstories/!svn/ver/1/cellstories/test/unit/user_test.rb
+END
+story_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/cellstories/!svn/ver/1/cellstories/test/unit/story_test.rb
+END
+add_maintext_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/cellstories/!svn/ver/1/cellstories/test/unit/add_maintext_test.rb
+END
+author_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/cellstories/!svn/ver/1/cellstories/test/unit/author_test.rb
+END
+library_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/cellstories/!svn/ver/1/cellstories/test/unit/library_test.rb
+END

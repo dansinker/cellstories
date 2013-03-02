@@ -1,0 +1,5 @@
+<div id="email_list">
+<% for author in @authors %>
+<%= author.email %>, 
+<%end%>
+</div>

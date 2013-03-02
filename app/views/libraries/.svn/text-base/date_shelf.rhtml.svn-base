@@ -1,0 +1,11 @@
+<p>
+<h2 class="headtitle">stories by date</h2>
+<p>
+<% for story in @dates %>
+<div id="library">
+<div class="weekday"><span><%=story.rundate.strftime("%b")%></span><%=story.rundate.strftime("%d")%></div>
+	<h2><%= link_to story.title, :controller => "stories", :action => "show", :id => story %> by <%= story.author.name %></h2>
+	<p><%= story.blurb %></p>
+</div>
+	<p>
+	<% end %>

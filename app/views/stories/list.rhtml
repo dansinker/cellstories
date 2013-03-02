@@ -1,0 +1,50 @@
+<% content_for :menu do %>
+<li id="newstory"><%= link_to 'new story', :action => 'new' %></li>
+<li><a href="https://www.google.com/analytics/" target="_blank">analytics</a></li>
+<li><a href="https://www.google.com/a/cellstories.net/ServiceLogin?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fa%2Fcellstories.net%2F%3Fzx%3Deb5yxdpgi5qo&bsv=zpwhtygjntrz&ss=1&ltmpl=default&ltmplcache=2" target="_blank">mail</a></li>
+<li><a href="http://www.facebook.com/pages/CellStories/153791020055?ref=ts" target="_blank">facebook</a></li>
+<li><a href="http://www.twitter.com/cellstories" target="_blank">twitter</a></li>
+<li><a href="http://analytics.percentmobile.com/accounts/1858">percent mobile</a></li>
+<li><a href="http://www.feedburner.com">feedburner</a></li>
+<% end %>
+
+<p>
+<div id="quickpeek">
+<iframe src="http://www.cellstories.net" width="360px" height="496px">
+loading today's story...
+</iframe>
+<h3>quickpeek</h3>
+</div>
+<div id="facebook">
+<iframe src="http://www.facebook.com/plugins/activity.php?site=www.cellstories.net&amp;width=300&amp;height=500&amp;header=true&amp;colorscheme=light&amp;recommendations=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:300px; height:500px;" allowTransparency="true">loading facebook...</iframe>
+<h3>facebook stats</h3>
+</div>
+<div id="storylist">
+<% for story in @stories %>
+  <h2><%= link_to story.title, {:action => "show", :id => story}, :class => 'quickview' %> by <%= link_to story.author.name, :controller => "authors", :action => "edit", :id => story.author %>  <% unless story.appeared.empty? %>
+    | <span style="font-size: 12px;font-family: sans-serif;font-weight: normal;background-color: red; color: white;padding: 3px;-webkit-border-radius:5px">PARTNER STORY</span>
+  <% end %></h2>
+  <p><%= story.blurb%></p>
+  <p><b>originally ran on <%= story.rundate.strftime("%A, %B %d %Y")%></b></p>
+  <%= link_to '<span>send scheduling e-mail</span>', {:action => 'scheduled', :id => story} %> to <%= story.author.email %> 
+  <p><%= link_to 'edit this story', :action => 'edit', :id => story %> | <%= link_to 'delete story', { :action => 'destroy', :id => story }, :confirm => 'Are you sure?', :method => :post %> | <a href="http://api.bit.ly/v3/shorten?login=sinker&apiKey=R_da3d99156ca919d9195352578ecd2964&longUrl=<%= url_for(:action => "show", :id => story, :only_path => false, :protocol => 'http://')%>%2F&format=txt">send to bit.ly</a> | <a href="http://twitter.com/share" class="twitter-share-button" data-url="<%= url_for(:action => "show", :id => story, :only_path => false, :protocol => 'http://')%>" data-text="Today on CellStories: PASTE_HERE" data-count="none">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+<hr> 
+  <% end %>
+</div>
+<% content_for :nav do %>
+<%= link_to 'Previous page', { :page => @story_pages.current.previous } if @story_pages.current.previous %>
+<%= link_to 'Next page', { :page => @story_pages.current.next } if @story_pages.current.next %> 
+<% end %>
+
+<% content_for :bottomjquery do %>
+jQuery("#facebook iframe").hide(); 
+	 jQuery("#facebook").click(function () {
+     jQuery("#facebook iframe").toggleClass("active").slideToggle("fast");
+     });
+     
+jQuery("#quickpeek iframe").hide();
+	jQuery("#quickpeek").click(function () {
+     jQuery("#quickpeek iframe").toggleClass("active").slideToggle("fast");
+     });
+     
+<% end %>

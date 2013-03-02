@@ -1,0 +1,51 @@
+<% content_for :head do %>
+<title>CellStories: a daily dose of awesome mobile stories</title>
+
+<meta name="Description" content="CellStories offers surprising works of mobile fiction, literary journalism, and personal narrative available daily on your iPhone, Android phone, iPad, or other mobile device. Whether on a lunchbreak, riding the train, or simply kicking back on the couch with a post-work beer, why not read something awesome?">
+
+<script type="text/javascript"><!--
+var winWidth = 0;
+  if( typeof( window.innerWidth ) == 'number' ) {
+    //Non-IE
+    winWidth = window.innerWidth;
+  } else if( document.documentElement && document.documentElement.clientWidth ) {
+    //IE 6+ in 'standards compliant mode'
+    winWidth = document.documentElement.clientWidth;
+  } else if( document.body && document.body.clientWidth ) {
+    //IE 4 compatible
+    winWidth = document.body.clientWidth;
+  }
+  if (navigator.userAgent.match(/^.*Android.*$/)) {}
+  else if (navigator.userAgent.match(/^.*iPad.*$/)) {}
+else if (winWidth > 501) 
+{
+location.href="<%= url_for(:controller => "info", :action => "welcome", :only_path => false, :protocol => 'http://')%>"
+}
+//-->
+</script>
+
+<meta name="google-site-verification" content="z--pN18rHW2e6nTeWJcORq2ek23sYy3sgHvl6Caz8g4" />
+<% end %>
+
+		<h2><%= @story.title%></h2>
+	<h3><%= @story.author.name %></h3>
+	<p>
+		<%= simple_format @story.maintext %>
+</p>
+<div id="bio"><%= simple_format @story.author.bio %>
+<div id="appeared"><%= simple_format @story.appeared %></div>
+</div>
+<div id="blurb">
+<% if @tomorrow %>
+<strong>Next time on CellStories:</strong> <%= @tomorrow.blurb rescue nil%> A story by <%= @tomorrow.author.name rescue nil%>.
+<% else %>
+<strong>Next time on CellStories:</strong> Another great story to read on your mobile device.
+<% end %>
+</div>
+<div id="links">
+<ul>
+<li><%= link_to 'share this story', {:action => 'share', :id => @story} %></li>
+<li><%= link_to 'read more on The Shelf', {:controller => 'libraries', :action => 'shelf'} %></li>
+</ul>
+</div>
+<%= percent_mobile_track(131642623176012079946991029310160143828,'home') %>

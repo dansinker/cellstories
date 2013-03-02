@@ -1,0 +1,16 @@
+<h1>Authors</h1>
+
+<% for author in @authors %>
+<h2><%= link_to author.name, :action => "show", :id => author %></h2>
+<p><i><%= author.bio %></i></p>
+<p><%= link_to 'edit author', :action => 'edit', :id => author %> | <%= link_to 'delete author', { :action => 'destroy', :id => author }, :confirm => 'Are you sure?', :method => :post %>
+<hr>
+  <% end %>
+
+<p>
+<%= link_to 'Previous page', { :page => @author_pages.current.previous } if @author_pages.current.previous %>
+<%= link_to 'Next page', { :page => @author_pages.current.next } if @author_pages.current.next %> 
+</p>
+<br />
+
+<%= link_to 'New author', :action => 'new' %>

@@ -1,0 +1,19 @@
+<p>
+<h2 class="headtitle">stories by author</h2>
+<p>
+<% for author in @authors %>
+<div id="library">
+<div id="author_library">
+<p>
+<h2><%= author.name %></h2>
+<p class="shelf_bio"><%= author.bio %></p>
+<% for story in author.stories %>
+<ul>
+		  <li><!--<%=h story.title %>-->
+			<%= link_to story.title, :controller => "stories", :action => "show", :id => story.id %></li>
+			</ul>	
+				<% end %>
+				<p>
+				</div>
+</div>
+  <% end %>

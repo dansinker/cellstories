@@ -1,0 +1,4 @@
+<% for story in @quickread %>
+<h2 class="storytitle"><%= link_to story.title, :controller => "stories", :action => "show", :id => story %> by <%= story.author.name %></h2>
+<p><%= story.blurb %></p>
+<% end %>

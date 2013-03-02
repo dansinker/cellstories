@@ -1,0 +1,19 @@
+xml.instruct!
+xml.rss("version" => "2.0", "xmlns:dc" => "http://purl.org/dc/elements/1.1/") do
+  xml.channel do
+
+   xml.title       "CellStories"
+   xml.link        url_for :only_path => false, :controller => 'stories'
+   xml.description "CellStories: daily stories for your mobile device"
+
+   for story in @stories
+     xml.item do
+       xml.title       story.title
+       xml.link        url_for :only_path => false, :controller => 'stories', :action => 'show', :id => story.id
+       xml.description story.blurb
+       xml.pubDate	   story.rundate.strftime("%a, %d %b %Y %H:%M:%S %z")
+       xml.guid        url_for :only_path => false, :controller => 'stories', :action => 'show', :id => story.id
+     end
+      end
+    end
+  end

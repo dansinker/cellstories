@@ -1,0 +1,28 @@
+# Filters added to this controller apply to all controllers in the application.
+# Likewise, all the methods added will be available for all controllers.
+
+class ApplicationController < ActionController::Base
+  # Pick a unique cookie name to distinguish our session data from others'
+  session :session_key => '_cellstories_session_id'
+  
+  helper_method :admin?
+  
+  protected
+  
+  def authorize
+    unless admin?
+      flash[:error] = "sorry, you need to be an admin to do that"
+  redirect_to :controller => 'stories', :action => 'index'
+  false
+end
+end
+
+  def admin?
+    session[:password] == "c3llstor13s"
+  end
+  
+  def quickread
+  @quickread = Story.find(:all, :conditions => ['rundate <= ?', Date.today], :order => 'random()', :limit => 2)
+end
+  
+end

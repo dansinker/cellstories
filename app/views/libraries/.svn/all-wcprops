@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/cellstories/!svn/ver/452/cellstories/app/views/libraries
+END
+_quickread.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/cellstories/!svn/ver/250/cellstories/app/views/libraries/_quickread.html.erb
+END
+date_shelf.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/cellstories/!svn/ver/277/cellstories/app/views/libraries/date_shelf.rhtml
+END
+shelf.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/cellstories/!svn/ver/452/cellstories/app/views/libraries/shelf.rhtml
+END
+title_shelf.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/cellstories/!svn/ver/278/cellstories/app/views/libraries/title_shelf.rhtml
+END
+author_shelf.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/cellstories/!svn/ver/276/cellstories/app/views/libraries/author_shelf.rhtml
+END
+index.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/cellstories/!svn/ver/377/cellstories/app/views/libraries/index.rhtml
+END

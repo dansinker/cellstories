@@ -1,0 +1,16 @@
+Share "<%= @story.title %>" with your friends.
+<div id="links">
+	<ul>
+<li><a href="http://m.facebook.com/sharer.php?u=<%= url_for(:action => "show", :id => @story, :only_path => false, :protocol => 'http://')%>&t=CellStories" id="fb"><span>share on facebook</span></a> 
+<li><a href="http://twitthis.com/twit?url=<%= url_for(:action => "show", :id => @story, :only_path => false, :protocol => 'http://')%>" id="tweet"><span>share on twitter</span></a>
+<li><a href="http://www.google.com/reader/link?url=http%3A%2F%2Fwww.cellstories.net<%= url_for(:action => "show", :id => @story)%>&title=<%= @story.title %>%20by%20<%= @story.author.name %>%20on%20CellStories&srcUrl=http%3A%2F%2Fwww.cellstories.net%2F&srcTitle=CellStories&snippet=">share on google reader</a>
+<li><a href="http://m.delicious.com/post?url=<%= url_for(:action => "show", :id => @story, :only_path => false, :protocol => 'http://')%>&title=<%= @story.title %> by <%= @story.author.name %> on CellStories">post to delicious</a></li>
+<li><a href="http://www.instapaper.com/user/login?b=1&u=http%3A%2F%2Fwww.cellstories.net<%= url_for(:action => "show", :id => @story)%>&t=<%= @story.title %>%20on%20CellStories&s=">read on instapaper</a></li>
+<li><%= link_to '<span>get a permalink</span>', {:action => "show", :id => @story}, :id => "perm" %>
+	</ul>
+</div>
+
+<div id="bottom_button">
+<%= link_to 'back', request.env['HTTP_REFERER'] %>
+</div>
+<%= percent_mobile_track(131642623176012079946991029310160143828,'share') %>

@@ -1,0 +1,11 @@
+<h2><%= @author.name %> | <%= mail_to @author.email %></h2>
+<p><%= simple_format @author.bio %>
+	<p>Stories by this author:<br />
+		<% for story in @author.stories %>
+		  <li><!--<%=h story.title %>-->
+			<%= link_to story.title, :controller => "stories", :action => "show", :id => story.id %></li>	
+				<% end %>
+<p>
+<%= link_to 'edit', :action => 'edit', :id => @author %> |
+<%= link_to 'list', :action => 'list' %> | 
+<%= link_to 'back to story admin', :controller => 'stories', :action => 'list' %>

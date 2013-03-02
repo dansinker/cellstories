@@ -1,0 +1,140 @@
+ul#admin_menu {
+		height: 40px;
+		background-color: #920f1e;
+		margin-left: -8px;
+		margin-right: -8px;
+		margin-top: -9px;
+	}
+
+	ul#admin_menu li {
+		font-weight: bold;
+		margin-left: -4px;
+		margin-bottom: 0px;
+		margin-right: 0px;
+		margin-top: 0px;
+		padding-bottom: 12px;
+		padding-top: 10px;
+		border-right-style: none;
+		border-right-width: 2px;
+		border-left-width: 2px;
+		border-left-style: none;
+		color: white;
+		font-size: 21px;
+		font-family: Helvetica, Verdana, Arial, sans-serif;
+		list-style-type: none;
+		display: inline-block;
+	}
+
+	ul#admin_menu li a {
+		font-style: normal;
+		font-weight: normal;
+		text-decoration: none;
+		color: white;
+		padding-right: 10px;
+		padding-left: 10px;
+		padding-bottom: 10px;
+		padding-top: 8px;
+	}
+
+	ul#admin_menu a:hover {
+		color: #4e4e4e;
+		background-color: #ff0b00;
+	}
+
+	ul#admin_menu li#newstory {
+		margin-left: 20px;
+		background-color: #88c733;
+	}
+
+	ul#admin_menu li#newstory a:hover {
+		color: #4e4e4e;
+		background-color: #e2ff16;
+	}
+	
+	#weekend_list iframe {
+	position: absolute;
+	top: 10;
+	}
+	
+	#facebook {
+	position: absolute;
+	right: 20px;
+	margin-top: -15px;
+
+	}
+	
+	#facebook h3, #quickpeek h3 {
+	height: 15px;
+	width: 281px;
+	background-color: green;
+	color: white;
+	font-family: Helvetica;
+	padding: 4px;
+	cursor: pointer;
+	text-align: right;
+	padding-right: 15px;
+		-webkit-box-shadow: 5px 5px 5px #ccc;
+	}
+	
+	
+	#facebook h3:before, #quickpeek h3:before {
+	content: " "
+	}
+	
+	#quickpeek {
+	position: absolute;
+	right: 320px;
+	margin-top: -15px;
+	}
+	
+	#quickpeek h3 {
+	background-color: olive;
+	width: 347px;
+			-webkit-border-bottom-left-radius: 10px;
+
+	}
+	
+	
+	#facebook iframe.active, #quickpeek iframe.active {
+	overflow: hidden;
+	margin-bottom: -5px;
+	}
+	
+	#storylist {
+	margin-top: 20px;
+	}
+	
+	#nav {
+	padding: 10px;
+	font-size: 1.6em;
+	background-color: #920f1e;
+	}
+	
+	#nav a {
+	color: white;
+	text-decoration: none;
+	padding: 7px;
+	}
+	
+	#nav a:hover {
+	
+	}
+	
+	.originalTextareaInfo {
+	width: 80px;
+	font-size: 12px;
+	font-family: sans-serif;
+	margin-top: -5px;
+	margin-left: 150px;
+	height: 20px;
+	padding: 2px;
+	padding-top: 0px;
+	padding-left: 5px;
+	width: 50px;
+	overflow: hidden;
+	}
+	
+	.warningTextareaInfo {
+	color: red;
+	font-weight: bold;
+	}

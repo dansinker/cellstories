@@ -1,0 +1,48 @@
+<% content_for :head do %>
+<title>CellStories: follow us on twitter and facebook</title>
+<script type="text/javascript" language="javascript">
+	{
+	winWidth=document.all?document.body.clientWidth:window.innerWidth; 
+	if (winWidth < 481)
+	location="<%= url_for(:action => "mobile_follow", :only_path => false, :protocol => 'http://')%>"
+	}
+	</SCRIPT>
+	<% end %>
+
+
+<h2>follow us!</h2>
+<p>We'd love to connect with you, so please join us on Facebook or Twitter (or, hell, both!). It's not just a good way to chat with us, but also a GREAT way to get a daily reminder of new stories.</p>
+<p>
+<iframe src="http://www.facebook.com/plugins/likebox.php?id=153791020055&amp;width=460&amp;height=290&amp;connections=16&amp;stream=false&amp;header=true" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; overflow:hidden; width:460px; height:290px"></iframe>
+<p>
+<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+new TWTR.Widget({
+  version: 2,
+  type: 'profile',
+  rpp: 4,
+  interval: 6000,
+  width: 460,
+  height: 300,
+  theme: {
+    shell: {
+      background: '#97afcc',
+      color: '#000000'
+    },
+    tweets: {
+      background: '#ffffff',
+      color: '#000000',
+      links: '#484ca3'
+    }
+  },
+  features: {
+    scrollbar: false,
+    loop: false,
+    live: false,
+    hashtags: true,
+    timestamp: true,
+    avatars: false,
+    behavior: 'all'
+  }
+}).render().setUser('cellstories').start();
+</script>

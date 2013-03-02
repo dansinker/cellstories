@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+	<head>
+	<meta name = "viewport" content = "width=device-width">
+	<%= yield :head %>
+	<meta name="generator" content="Coda: it rules">
+	<meta name="author" content="Daniel Sinker">
+	<meta name="Description" content="Whether on a lunchbreak, riding the train, or simply kicking back on the couch with a post-work beer, why not read something awesome? CellStories offers surprising works of short fiction, literary journalism, and personal narrative available daily on your iPhone, G1, iPad, or other mobile device.">
+	<%= stylesheet_link_tag 'desktop' %>
+	<%= javascript_include_tag 'prototype' %>
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/Cellstories" />
+	</head>
+	<body>
+	<div id="cellbox">
+	<div id="header">
+	<h1><%= link_to '<span>CellStories</span>', :action => 'welcome' %></h1>
+	<h2><span>a daily dose of awesome mobile stories for your phone or iPad</span></h2>
+	</div>
+	<div id="bodycopy">
+	<div id="hand">
+	<img src="../../images/desktop/hand.png">
+	</div>
+	<div id="interior">
+	<%= yield  %>
+	</div>
+
+<p><a href="http://feeds.feedburner.com/Cellstories" rel="alternate" type="application/rss+xml"><img src="http://www.feedburner.com/fb/images/pub/feed-icon16x16.png" alt="" style="vertical-align:middle;border:0"/></a>&nbsp;<a href="http://feeds.feedburner.com/Cellstories" rel="alternate" type="application/rss+xml">subscribe via RSS</a> | <%= link_to 'about cellstories', :action => 'desktop_about', :locals => @pagetitle %> | <%= link_to 'follow us', :action => 'desktop_follow' %> | <%= link_to 'submit your story', :action => 'desktop_submit' %> </p>
+
+	</div>
+	
+	</div>
+	<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+	try {
+	var pageTracker = _gat._getTracker("UA-9357219-1");
+	pageTracker._trackPageview();
+	} catch(err) {}</script>
+
+	</body>
+</html>

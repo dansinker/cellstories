@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/cellstories/!svn/ver/127/cellstories/log
+END
+test.log
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/cellstories/!svn/ver/76/cellstories/log/test.log
+END
+development.log
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/cellstories/!svn/ver/127/cellstories/log/development.log
+END
+production.log
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/cellstories/!svn/ver/1/cellstories/log/production.log
+END
+server.log
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/cellstories/!svn/ver/1/cellstories/log/server.log
+END

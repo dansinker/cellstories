@@ -1,0 +1,25 @@
+<% content_for :head do %>
+<title>CellStories | The Shelf: mobile stories for your iPhone, Android phone, iPad, and other mobile devices</title>
+<script type="text/javascript" language="javascript">
+	{
+	winWidth=document.all?document.body.clientWidth:window.innerWidth; 
+	if (winWidth < 481)
+	location="<%= url_for(:controller => "libraries", :action => "shelf", :only_path => false, :protocol => 'http://')%>"
+	}
+	</SCRIPT>
+<% end %>
+
+<h2 class="welcome_page">CellStories has published more than 300 stories for your mobile device. Right here is where you can access all of them. If you were on your phone or iPad, that is.</h2>
+
+<div id="storybox">
+<p>Our archive is waiting for your mobile device at <strong>www.cellstories.net</strong>
+</div>
+	
+<p>That's right: CellStories is mobile-only storytelling. Whether on a lunch break, riding the train, or simply kicking back on the couch with a post-work beer, why not read something awesome? Featuring original stories as well as writing provided by some of the best independent presses, literary websites, and innovative reading series around, our archive can always provide you with something worth reading. 
+
+<p><img src="../images/desktop/cellstories_shelf_QR.png" class="left_float">We want to get you into our archive as quickly as possible. If you have a phone that can read QR Codes? Just zap this one, and start reading! 
+
+<p>Don't have a phone that can do that? No problem: If it can get on the Internet it can access CellStories. Just point the browser of your phone or your iPad to www.cellstories.net/shelf and you're done!</p>
+
+
+<p>Visit us on your mobile device to access the archive and to share your favorite stories with your friends on Facebook, Twitter, Google Reader and more. See you soon!

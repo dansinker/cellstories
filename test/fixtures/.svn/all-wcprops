@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/cellstories/!svn/ver/1/cellstories/test/fixtures
+END
+users.yml
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/cellstories/!svn/ver/1/cellstories/test/fixtures/users.yml
+END
+add_maintexts.yml
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/cellstories/!svn/ver/1/cellstories/test/fixtures/add_maintexts.yml
+END
+authors.yml
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/cellstories/!svn/ver/1/cellstories/test/fixtures/authors.yml
+END
+stories.yml
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/cellstories/!svn/ver/1/cellstories/test/fixtures/stories.yml
+END
+libraries.yml
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/cellstories/!svn/ver/1/cellstories/test/fixtures/libraries.yml
+END

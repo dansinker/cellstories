@@ -1,0 +1,13 @@
+<%= error_messages_for 'author' %>
+
+<!--[form:author]-->
+<p><label for="author_name">Name</label><br/>
+<%= text_field 'author', 'name'  %></p>
+
+<p><label for="author_email">E-mail</label><br/>
+<%= text_field 'author', 'email' %></p>
+
+<p><label for="author_bio">Bio</label><br/>
+<%= text_area 'author', 'bio'  %></p>
+<!--[eoform:author]-->
+

@@ -1,0 +1,22 @@
+<% content_for :head do %>
+<title>CellStories: mobile stories for your iPhone, iPad, Android phone, and other mobile devices</title>
+<script type="text/javascript" language="javascript">
+	{
+	winWidth=document.all?document.body.clientWidth:window.innerWidth; 
+	if (winWidth < 481)
+	location="<%= url_for(:controller => "stories", :action => "index", :only_path => false, :protocol => 'http://')%>"
+	}
+	</SCRIPT>
+	<% end %>
+
+<h2 class="welcome_page">A daily story for your iPhone, iPad, Droid, Blackberry or other mobile device.</h2>
+	<div id="storybox">
+	<p>Today's story is <strong><%= @story.title rescue nil %></strong> by <%= @story.author.name rescue nil %>. Read it on your phone right now!
+	</div>
+
+<p>Whether on a lunch break, riding the train, or simply kicking back on the couch with a post-work beer, why not read something awesome. CellStories brings a new story, every day to your phone or iPad. Free and surprising, we strive to bring you writing that's unexpected. Like all good stories, some are true, some are not, and many fall in that wonderful grey area between.
+
+<p><img src="../images/desktop/cellstories_qrcode.png" class="left_float">Have a phone that can read QR Codes? Just zap this one, and start reading!</p>
+
+
+<p>Visit us on your mobile device to read today's story and to share stories with your friends on Facebook and Twitter. See you soon!
